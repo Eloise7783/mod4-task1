@@ -27,5 +27,11 @@ pipeline {
           sh "docker build -t nginx -f Dockerfile.nginx"
         }
       }
+      stage('run nginx'){
+        steps {
+          sh "docker run --name nginx -dp 80:80--network taskonenetwork nginx"
+          
+        }
+      }
     }
   }
