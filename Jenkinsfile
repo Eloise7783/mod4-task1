@@ -8,7 +8,7 @@ pipeline {
     }
     stage('build nginx container'){
       steps {
-        sh "docker build -t nginxcont .nginx ."
+        sh "docker build -t nginxcont .nginx"
       }
     }
   }
