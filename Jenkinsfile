@@ -13,7 +13,7 @@ pipeline {
       }
       stage('run flask app'){
         steps {
-          sh "docker run -d --name flask-app"
+          sh "docker run -d --name flask-app flask-app"
         }
       }
       stage('build nginx container'){
