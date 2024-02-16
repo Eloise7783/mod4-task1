@@ -11,6 +11,11 @@ pipeline {
           sh "docker build -t flask-app ."
         }
       }
+      stage('run flask app'){
+        steps {
+          sh "docker run --name -d flask-app"
+        }
+      }
       stage('build nginx container'){
         steps {
           sh "docker build -t nginx -f Dockerfile.nginx"
