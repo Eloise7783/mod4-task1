@@ -29,7 +29,7 @@ pipeline {
       }
       stage('run nginx'){
         steps {
-          sh "docker run --name nginx -dp 80:80--network taskonenetwork nginx"
+          sh "docker run --name nginx -dp 80:80 --network taskonenetwork nginx"
           
         }
       }
