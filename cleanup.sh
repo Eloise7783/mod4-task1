@@ -1,4 +1,4 @@
-docker rm -f $(docker ps -aq)
-docker rmi -f $(docker images)
-docker rm -f $(docker ps -aq)
-docker rmi -f $(docker images)
+docker rm -f $(docker ps -aq) || true
+docker rmi -f $(docker images) || true
+docker rm -f $(docker ps -aq) || true
+docker rmi -f $(docker images) || true
