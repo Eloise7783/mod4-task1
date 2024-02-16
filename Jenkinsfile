@@ -3,7 +3,7 @@ pipeline {
     stages {
       stage('cleanup'){
         steps {
-          sh "sh cleanup.sh || true"
+          sh "sh cleanup.sh"
         }
       }
       stage('create network'){
