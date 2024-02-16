@@ -8,7 +8,7 @@ pipeline {
       }
       stage('create network'){
         steps {
-          sh "docker create network taskonenetwork || true"
+          sh "docker network create taskonenetwork || true"
         }
       }
       stage('build app container'){
@@ -18,7 +18,7 @@ pipeline {
       }
       stage('run flask app'){
         steps {
-          sh "docker run -d --name flask-app flask-app"
+          sh "docker run -d --name flask-app --network taskonenetwork flask-app"
           
         }
       }
