@@ -18,7 +18,7 @@ pipeline {
       }
       stage('run flask app'){
         steps {
-          sh "docker run --name flask-app -dp 80:5500 --network taskonenetwork flask-app"
+          sh "docker run --name flask-app -d --network taskonenetwork flask-app"
           
         }
       }
