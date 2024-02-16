@@ -24,7 +24,7 @@ pipeline {
       }
       stage('build nginx container'){
         steps {
-          sh "docker build -t nginx -f Dockerfile.nginx"
+          sh "docker build -t nginx Dockerfile.nginx"
         }
       }
       stage('run nginx'){
