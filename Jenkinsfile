@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('build app container'){
       steps {
-        sh "docker build -t flask-app var/lib/jenkins/workspace/task-1-pipeline/Dockerfile"
+        sh "docker build -t flask-app ."
       }
     }
     stage('build nginx container'){
       steps {
-        sh "docker build -t nginx var/lib/jenkins/workspace/task-1-pipeline/Dockerfile.nginx"
+        sh "docker build -t nginx -f Dockerfile.nginx"
       }
     }
   }
